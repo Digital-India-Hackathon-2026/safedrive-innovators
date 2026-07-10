@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prediction Result</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>🤖 AI Decision</h1>
+
+<div id="resultBox">
+
+<h2 id="resultText">
+
+Processing...
+
+</h2>
+
+</div>
+
+<div class="resultCards">
+
+<div>
+
+Alcohol Level
+
+<span id="alcoholLevel">
+
+--
+
+</span>
+
+</div>
+
+<div>
+
+Vehicle Status
+
+<span id="vehicleStatus">
+
+Checking...
+
+</span>
+
+</div>
+
+<div>
+
+Emergency
+
+<span id="alertStatus">
+
+Waiting...
+
+</span>
+
+</div>
+
+</div>
+
+<br><br>
+
+<button class="start-btn"
+
+onclick="window.location='/dashboard'">
+
+VIEW DASHBOARD
+
+</button>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/result.js') }}"></script>
+
+</body>
+
+</html>
