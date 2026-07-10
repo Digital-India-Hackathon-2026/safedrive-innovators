@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SafeDrive AI</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <nav>
+
+            <div class="logo">
+
+                🚗 SafeDrive AI
+
+            </div>
+
+            <div class="status">
+
+                <span class="dot"></span>
+
+                System Ready
+
+            </div>
+
+        </nav>
+
+        <div class="hero-content">
+
+            <div class="left">
+
+                <h1>
+
+                    AI Powered <br>
+
+                    Anti-Drunk Driving <br>
+
+                    System
+
+                </h1>
+
+                <p>
+
+                    Preventing road accidents through intelligent driver
+                    verification, alcohol detection, GPS tracking,
+                    and emergency response.
+
+                </p>
+
+                <div class="buttons">
+
+                    <button onclick="startVehicle()"
+                        class="start-btn">
+
+                        START VEHICLE
+
+                    </button>
+
+                    <button onclick="window.location='/dashboard'"
+                        class="secondary-btn">
+
+                        VIEW DASHBOARD
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <div class="car-card">
+
+                    <div class="car">
+
+                        🚘
+
+                    </div>
+
+                    <h2>
+
+                        Vehicle Status
+
+                    </h2>
+
+                    <div class="vehicle-info">
+
+                        <div>
+
+                            Engine
+
+                            <span>OFF</span>
+
+                        </div>
+
+                        <div>
+
+                            Driver
+
+                            <span>Waiting</span>
+
+                        </div>
+
+                        <div>
+
+                            Alcohol
+
+                            <span>Not Checked</span>
+
+                        </div>
+
+                        <div>
+
+                            GPS
+
+                            <span>Ready</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="icon">
+
+                    📷
+
+                </div>
+
+                <h3>
+
+                    Driver Verification
+
+                </h3>
+
+                <p>
+
+                    Live camera verification before ignition.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="icon">
+
+                    🍺
+
+                </div>
+
+                <h3>
+
+                    Alcohol Detection
+
+                </h3>
+
+                <p>
+
+                    Detects alcohol level before allowing ignition.
+
+                </p>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="icon">
+
+                    📍
+
+                </div>
+
+                <h3>
+
+                    Emergency Alert
+
+                </h3>
+
+                <p>
+
+                    Shares driver's location in emergency situations.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
+
+</html>

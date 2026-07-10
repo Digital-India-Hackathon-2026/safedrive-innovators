@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>SafeDrive Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>📊 SafeDrive AI Dashboard</h1>
+
+<h2>Vehicle History</h2>
+
+<table>
+
+<tr>
+
+<th>Date</th>
+
+<th>Alcohol</th>
+
+<th>Status</th>
+
+<th>Location</th>
+
+</tr>
+
+{% for row in records %}
+
+<tr>
+
+<td>{{row[1]}}</td>
+
+<td>{{row[2]}}%</td>
+
+<td>
+
+{% if row[3]=="SAFE" %}
+
+🟢 SAFE
+
+{% else %}
+
+🔴 LOCKED
+
+{% endif %}
+
+</td>
+
+<td>
+
+{% if row[4]=="Permission Denied" %}
+
+Location Permission Denied
+
+{% elif row[4]=="Not Supported" %}
+
+GPS Not Supported
+
+{% else %}
+
+<a
+target="_blank"
+href="https://www.google.com/maps?q={{row[4]}},{{row[5]}}">
+
+📍 View Map
+
+</a>
+
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br><br>
+
+<button
+class="secondary-btn"
+onclick="window.location='/'">
+
+HOME
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

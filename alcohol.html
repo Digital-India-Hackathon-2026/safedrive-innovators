@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcohol Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🍺 Alcohol Detection</h1>
+
+        <h2>MQ-3 Alcohol Sensor (Prototype)</h2>
+
+        <div class="meter">
+
+            <div class="meter-circle">
+
+                <span id="percent">0%</span>
+
+            </div>
+
+        </div>
+
+        <h3 id="readingText">
+
+            Reading Breath Sample...
+
+        </h3>
+
+        <div class="progress-box">
+
+            <div class="progress-bar" id="alcoholBar"></div>
+
+        </div>
+
+        <div class="sensorInfo">
+
+            <div>
+
+                Sensor Status
+
+                <span id="sensorStatus">
+
+                    Active
+
+                </span>
+
+            </div>
+
+            <div>
+
+                Alcohol Level
+
+                <span id="alcoholValue">
+
+                    0%
+
+                </span>
+
+            </div>
+
+            <div>
+
+                AI Analysis
+
+                <span id="analysis">
+
+                    Processing...
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/alcohol.js') }}"></script>
+
+</body>
+</html>

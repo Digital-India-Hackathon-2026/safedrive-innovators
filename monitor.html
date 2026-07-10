@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Driver Verification</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>🚗 Driver Verification</h1>
+
+<h2>Live Camera Monitoring</h2>
+
+<p class="status" id="cameraStatus">
+
+Starting Camera...
+
+</p>
+
+<video
+id="video"
+autoplay
+playsinline
+muted>
+</video>
+
+<div class="verifyBox">
+
+<div class="verifyTitle">
+
+Verification Progress
+
+</div>
+
+<div class="progress-box">
+
+<div
+id="progressBar"
+class="progress-bar">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="info">
+
+<div>
+
+📷 Camera
+
+<span id="camText">
+
+Waiting...
+
+</span>
+
+</div>
+
+<div>
+
+👤 Driver
+
+<span id="driverText">
+
+Detecting...
+
+</span>
+
+</div>
+
+<div>
+
+🤖 AI
+
+<span id="aiText">
+
+Initializing...
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/monitor.js') }}"></script>
+
+</body>
+
+</html>
